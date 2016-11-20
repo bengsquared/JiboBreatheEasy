@@ -1,0 +1,18 @@
+#TopRule= $* (
+#    $yes{answer='yes'} |
+#    $no{answer='no'}
+#    ) $*;
+#yes = y | yes | yeah;
+#no = n | no | nope;
+
+
+# Returns:
+# "NLParse": {
+#   "yesNo": "yes"
+# },
+
+TopRule = $* (
+    $yesno{yesNo = yesno._yes_no}
+) $*;
+
+yesno = ($factory:yes_no{_yes_no = yes_no._nl} | ok{_yes_no = 'yes'} | alright{_yes_no = 'yes'});

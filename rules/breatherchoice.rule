@@ -1,0 +1,9 @@
+TopRule = $* (
+    $Breathing {what='Breathing'} |
+    $Awareness {what='Awareness'} |
+    $Meditation {what='Meditation'}
+) $*;
+
+Breathing = ( $* breathing $*) | ($* mindful $* ) | $* mindfulness $*;
+Awareness = ($* awareness $*) | ($* body $*);
+Meditation = ($* meditation $*);

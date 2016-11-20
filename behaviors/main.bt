@@ -1,0 +1,495 @@
+{
+    "1": {
+        "id": 1,
+        "class": "Sequence",
+        "name": "ok",
+        "options": {},
+        "asset-pack": "core",
+        "children": [
+            "ed7af6b6-bded-4cad-8658-ba04ec65fff6",
+            "2df114fa-1818-498b-b3d8-00dc437e52d5"
+        ],
+        "decorators": []
+    },
+    "meta": {
+        "version": 1
+    },
+    "2df114fa-1818-498b-b3d8-00dc437e52d5": {
+        "id": "2df114fa-1818-498b-b3d8-00dc437e52d5",
+        "class": "Sequence",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "children": [
+            "f69080eb-e768-49ea-8540-189b76e3398d",
+            "2c92cec8-f384-4cbc-a56a-8a07a7e12b74",
+            "cc04a406-17ea-4e4d-8c78-f4fbcb2f6d28",
+            "d7e48a42-5457-4184-807d-83a64c0af69f",
+            "3acb7eeb-7ebe-4870-9c0c-e3e3f523ce48",
+            "764573e1-15a8-4fb7-98ac-6c00baafd523",
+            "08715326-a5db-41b7-ba7f-5d69d9c58f3b",
+            "3010124f-c6b9-4b1e-8ac5-ddfdbc160620",
+            "a08b091a-a217-4ccb-b649-4af51ac7fa7e",
+            "bcc3100e-2779-4192-98f3-c28e70559df6",
+            "ffeee797-b24a-4524-b685-abf9d31d8637",
+            "6a182c67-d8d7-4c13-a6df-1de2bb53eb58",
+            "6da5c41f-aa3b-4f80-bf68-2f12e832103d",
+            "abcb41ef-e33b-4ac3-b3ab-6522e64c005a",
+            "e9fe96d2-649e-43b4-838e-2b9de846bbf8",
+            "2e8efa27-1e71-4656-992b-22394def6aef",
+            "8cbfc303-1ff7-49b4-b443-3bd09f68ae7d",
+            "67938a4b-6a4c-4a9f-a95d-646cb3f7842f",
+            "19db0e7c-6ee6-41d1-a88c-5e5c2ecad3e1",
+            "81f8930f-faaa-4492-8023-434618787da7",
+            "49c43558-db82-4a9e-9151-d3cd5ae6962c",
+            "0ae0d2a5-45ba-40fc-9dae-80ec213a8a2e"
+        ],
+        "decorators": [],
+        "parent": 1
+    },
+    "bcc3100e-2779-4192-98f3-c28e70559df6": {
+        "id": "bcc3100e-2779-4192-98f3-c28e70559df6",
+        "class": "TimeoutJs",
+        "name": "",
+        "options": {
+            "getTime": [
+                "() => {",
+                "    return 2000;",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "764573e1-15a8-4fb7-98ac-6c00baafd523": {
+        "id": "764573e1-15a8-4fb7-98ac-6c00baafd523",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Okay, well let's do some mindful breathing.",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "2c92cec8-f384-4cbc-a56a-8a07a7e12b74": {
+        "id": "2c92cec8-f384-4cbc-a56a-8a07a7e12b74",
+        "class": "LookAt",
+        "name": "",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "  let jibo = require('jibo');",
+                "   let entity = jibo.lps.getClosestVisualEntity();",
+                "",
+                "   let position = {x:.5, y:.1, z:.4};",
+                "",
+                "   if (entity) {",
+                "   position = {x: entity.position.x, y: entity.position.y, z: entity.position.z};",
+                "   }",
+                "",
+                "   return position;",
+                " }"
+            ],
+            "isContinuous": false,
+            "config": [
+                "(lookAt) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "f69080eb-e768-49ea-8540-189b76e3398d": {
+        "id": "f69080eb-e768-49ea-8540-189b76e3398d",
+        "class": "Blink",
+        "name": "",
+        "options": {},
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "3010124f-c6b9-4b1e-8ac5-ddfdbc160620": {
+        "id": "3010124f-c6b9-4b1e-8ac5-ddfdbc160620",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "First I want you to get comfortable, either standing or sitting.",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "6a182c67-d8d7-4c13-a6df-1de2bb53eb58": {
+        "id": "6a182c67-d8d7-4c13-a6df-1de2bb53eb58",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "breathing.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "6da5c41f-aa3b-4f80-bf68-2f12e832103d": {
+        "id": "6da5c41f-aa3b-4f80-bf68-2f12e832103d",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Keep breathing like this,\nTry to relax your breath a little each time you do this\n\n",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "8cbfc303-1ff7-49b4-b443-3bd09f68ae7d": {
+        "id": "8cbfc303-1ff7-49b4-b443-3bd09f68ae7d",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "breathing.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5",
+        "decorators": []
+    },
+    "0ae0d2a5-45ba-40fc-9dae-80ec213a8a2e": {
+        "id": "0ae0d2a5-45ba-40fc-9dae-80ec213a8a2e",
+        "class": "TimeoutJs",
+        "name": "",
+        "options": {
+            "getTime": [
+                "() => {",
+                "    return 2000000;",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "ffeee797-b24a-4524-b685-abf9d31d8637": {
+        "id": "ffeee797-b24a-4524-b685-abf9d31d8637",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Good! Now, I want you to take a deep breath for 6 seconds. And then breathe out for 6 six seconds. Follow me!\n\n",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "e9fe96d2-649e-43b4-838e-2b9de846bbf8": {
+        "id": "e9fe96d2-649e-43b4-838e-2b9de846bbf8",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Now as you breathe adjust your body to get more comfortable.\nKeep breathing mindfully.\n\n\n",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "19db0e7c-6ee6-41d1-a88c-5e5c2ecad3e1": {
+        "id": "19db0e7c-6ee6-41d1-a88c-5e5c2ecad3e1",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Do you feel more relaxed? \n\nI hope so!\n\nKeep Breathing like this as you go throughout your day!",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "cc04a406-17ea-4e4d-8c78-f4fbcb2f6d28": {
+        "id": "cc04a406-17ea-4e4d-8c78-f4fbcb2f6d28",
+        "class": "TextToSpeech",
+        "name": "",
+        "options": {
+            "words": "Hi, How are you feeling today?",
+            "onWord": [
+                "(word) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "ed7af6b6-bded-4cad-8658-ba04ec65fff6": {
+        "id": "ed7af6b6-bded-4cad-8658-ba04ec65fff6",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "idle.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": 1,
+        "decorators": [
+            "632cc52f-74de-459c-ad06-edcb30fda5aa"
+        ]
+    },
+    "632cc52f-74de-459c-ad06-edcb30fda5aa": {
+        "id": "632cc52f-74de-459c-ad06-edcb30fda5aa",
+        "class": "SucceedOnEmbedded",
+        "name": "",
+        "options": {
+            "rule": "hey_jibo",
+            "onResult": [
+                "(listener) => {",
+                "\tlistener.on('hey-jibo', function(asrResult, speakerIds) {",
+                "",
+                "\t});",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "abcb41ef-e33b-4ac3-b3ab-6522e64c005a": {
+        "id": "abcb41ef-e33b-4ac3-b3ab-6522e64c005a",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "breathing.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "9e961a13-4cfa-4430-838f-f3198238d0fc": {
+        "id": "9e961a13-4cfa-4430-838f-f3198238d0fc",
+        "class": "SucceedOnEmbedded",
+        "name": "",
+        "options": {
+            "rule": "hey_jibo",
+            "onResult": [
+                "(listener) => {",
+                "\tlistener.on('hey-jibo', function(asrResult, speakerIds) {",
+                "",
+                "\t});",
+                "}"
+            ]
+        },
+        "asset-pack": "core"
+    },
+    "81f8930f-faaa-4492-8023-434618787da7": {
+        "id": "81f8930f-faaa-4492-8023-434618787da7",
+        "class": "Subtree",
+        "name": "",
+        "options": {
+            "behaviorPath": "idle.bt",
+            "getNotepad": [
+                "() => {",
+                "    return {};",
+                "}"
+            ],
+            "onResult": [
+                "(treeResult) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5",
+        "decorators": [
+            "9e961a13-4cfa-4430-838f-f3198238d0fc"
+        ]
+    },
+    "49c43558-db82-4a9e-9151-d3cd5ae6962c": {
+        "id": "49c43558-db82-4a9e-9151-d3cd5ae6962c",
+        "class": "PlayAnimation",
+        "name": "",
+        "options": {
+            "animPath": "breathing.keys",
+            "config": [
+                "(animation) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "08715326-a5db-41b7-ba7f-5d69d9c58f3b": {
+        "id": "08715326-a5db-41b7-ba7f-5d69d9c58f3b",
+        "class": "LookAt",
+        "name": "",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "  let jibo = require('jibo');",
+                "   let position = {x:0, y:0, z:-1};",
+                "",
+                "",
+                "",
+                "   return position;",
+                " }"
+            ],
+            "isContinuous": false,
+            "config": [
+                "(lookAt) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "a08b091a-a217-4ccb-b649-4af51ac7fa7e": {
+        "id": "a08b091a-a217-4ccb-b649-4af51ac7fa7e",
+        "class": "LookAt",
+        "name": "",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "  let jibo = require('jibo');",
+                "   let entity = jibo.lps.getClosestVisualEntity();",
+                "",
+                "   let position = {x:.5, y:.1, z:.4};",
+                "",
+                "   if (entity) {",
+                "   position = {x: entity.position.x, y: entity.position.y, z: entity.position.z};",
+                "   }",
+                "",
+                "   return position;",
+                " }"
+            ],
+            "isContinuous": false,
+            "config": [
+                "(lookAt) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "2e8efa27-1e71-4656-992b-22394def6aef": {
+        "id": "2e8efa27-1e71-4656-992b-22394def6aef",
+        "class": "LookAt",
+        "name": "",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "  let jibo = require('jibo');",
+                "   let entity = jibo.lps.getClosestVisualEntity();",
+                "",
+                "   let position = {x:.5, y:.1, z:.4};",
+                "",
+                "   if (entity) {",
+                "   position = {x: entity.position.x, y: entity.position.y, z: entity.position.z};",
+                "   }",
+                "",
+                "   return position;",
+                " }"
+            ],
+            "isContinuous": false,
+            "config": [
+                "(lookAt) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "67938a4b-6a4c-4a9f-a95d-646cb3f7842f": {
+        "id": "67938a4b-6a4c-4a9f-a95d-646cb3f7842f",
+        "class": "LookAt",
+        "name": "",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "  let jibo = require('jibo');",
+                "   let entity = jibo.lps.getClosestVisualEntity();",
+                "",
+                "   let position = {x:.5, y:.1, z:.4};",
+                "",
+                "   if (entity) {",
+                "   position = {x: entity.position.x, y: entity.position.y, z: entity.position.z};",
+                "   }",
+                "",
+                "   return position;",
+                " }"
+            ],
+            "isContinuous": false,
+            "config": [
+                "(lookAt) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "d7e48a42-5457-4184-807d-83a64c0af69f": {
+        "id": "d7e48a42-5457-4184-807d-83a64c0af69f",
+        "class": "TimeoutJs",
+        "name": "",
+        "options": {
+            "getTime": [
+                "() => {",
+                "    return 5000;",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    },
+    "3acb7eeb-7ebe-4870-9c0c-e3e3f523ce48": {
+        "id": "3acb7eeb-7ebe-4870-9c0c-e3e3f523ce48",
+        "class": "LookAt",
+        "name": "",
+        "options": {
+            "getTarget": [
+                "() => {",
+                "  let jibo = require('jibo');",
+                "   let entity = jibo.lps.getClosestVisualEntity();",
+                "",
+                "   let position = {x:.5, y:.1, z:.4};",
+                "",
+                "   if (entity) {",
+                "   position = {x: entity.position.x, y: entity.position.y, z: entity.position.z};",
+                "   }",
+                "",
+                "   return position;",
+                " }"
+            ],
+            "isContinuous": false,
+            "config": [
+                "(lookAt) => {",
+                "}"
+            ]
+        },
+        "asset-pack": "core",
+        "parent": "2df114fa-1818-498b-b3d8-00dc437e52d5"
+    }
+}

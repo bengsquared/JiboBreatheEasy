@@ -1,0 +1,11 @@
+
+TopRule = $* (
+    $unstable {what='unstable'} |
+    $stable {what='stable'}
+
+) $*;
+
+stable = ($* $good $*) | ($* not $* $bad $*);
+unstable = ($* not $* $good $*) | ($* $bad $*);
+bad = bad | sad | scared | anxious | agitated | upset | overwhelmed;
+good = fine | great | fantastic | good | fabulous | alright | okay | OK | well;
