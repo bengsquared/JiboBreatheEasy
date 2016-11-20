@@ -243,6 +243,14 @@
                     "time": 33
                 }
             ]
+        },
+        {
+            "id": "e269ef3b113c4e4a98373298812df310",
+            "name": "Eye Texture",
+            "type": "Eye Texture",
+            "visible": true,
+            "locked": false,
+            "keyframes": []
         }
     ],
     "version": "0.6.0",
